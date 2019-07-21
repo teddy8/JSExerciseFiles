@@ -17,7 +17,7 @@ family.addFamily(3, 'lyn', 'niece');
 family.addFamily(10, 'dangdangi', 'dog');
 
 var printMembers = function() {
-  var members = family.members;
+  let members = family.members;
   for (role in members) {
     console.log('role => ' + role + ', name => ' + members[role].name
      + ', age => ' + members[role].age);

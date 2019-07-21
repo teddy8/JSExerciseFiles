@@ -1,3 +1,3 @@
-import { hello } from './hello.js';
+import { sum } from './test.js/index.js';
 
-hello('es6 module');
+sum(2, 3);

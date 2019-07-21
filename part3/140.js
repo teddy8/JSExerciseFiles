@@ -1,32 +1,34 @@
-function doJob(name, person) {
-  return new Promise((resolve, reject) => {  
+function doWork(name, server) {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if(person.stamina > 50) {        
-        person.stamina -= 30;
+      if (server.traffic > 30) {
+        server.traffic -= 30;
         resolve({
           result: `${name} success`
         });
-      } else {
+      } 
+      else {
         reject(new Error(`${name} failed`));
       }
     }, 1000);
   });
 };
 
-const harin = { stamina: 100 };
+const server = { traffic: 100 };
 
-const execute = async function() {
+const execute = async function () {
   try {
-    let v = await doJob('work', harin);
+    let v = await doWork('work1', server);
     console.log(v.result);
-    v = await doJob('study', harin);
+    v = await doWork('work2', server);
     console.log(v.result);
-    v = await doJob('work', harin);
+    v = await doWork('work1', server);
     console.log(v.result);
-    v = await doJob('study', harin);
+    v = await doWork('work2', server);
   } catch (e) {
     console.log(e);
   }
 }
 
 execute();
+console.log("hello");

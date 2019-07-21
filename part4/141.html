@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- html 문서 버전을 알려줌-->
 <html>
 <head>
   <meta charset="UTF-8">
@@ -8,14 +8,14 @@
   <div id="div1">hello DOM</div>
   <ul>
     <li>list item1</li>
-    <li>list item2</li>
-  </ul>
-  <script>
+    <li>list item2 ㅎ2</li>
+  </ul> 
+  <script> // script 태그를 마지막에 하는 이유는 태그가 미리 작성되있어야 접근할 수 있기 때문
     const div1El = document.getElementById('div1');
-    console.log(div1El.innerHTML);
+    console.log(div1El.innerHTML);  // hello DOM
 
-    console.log(div1El.nodeType);
-    console.log(div1El.nodeType === Node.ELEMENT_NODE);
+    console.log(div1El.nodeType); // ELEMENT_NUDE(body, a, p ...)라서 1 출력, ATTRIBUTE_NODE(class="hello"...)면 2
+    console.log(div1El.nodeType === Node.ELEMENT_NODE); // true
 
     console.log(div1El.constructor);
     console.log(div1El instanceof HTMLDivElement);
@@ -29,8 +29,11 @@
     console.log(div1El2.innerHTML);
     
     const liEls = document.querySelectorAll('ul li');
-    console.log(liEls.item(0).innerHTML);
-    console.log(liEls.item(1).textContent);
+    for (const iterator of liEls) {
+      console.log(iterator.innerHTML);
+    }
+    // console.log(liEls.item(0).innerHTML);
+    // console.log(liEls.item(1).textContent);
   </script>
 </body>
 </html>

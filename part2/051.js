@@ -1,5 +1,5 @@
 class Cart {
-  constructor() {
+  constructor() { // 생성자
     this.store = {};
   }
 

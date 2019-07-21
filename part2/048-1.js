@@ -4,7 +4,7 @@ const studentProto = {
   }
 };
 
-const harin = {
+const monster = {
   name: '하린',
   age: 10,
   exp: 0,
@@ -18,9 +18,9 @@ const bbo = {
   __proto__: studentProto
 };
 
-bbo.gainExp();
-harin.gainExp();
-harin.gainExp();
+bbo.gainExp();  // 11
+monster.gainExp();  // 1
+monster.gainExp();  // 2
 
-console.log(harin);
-console.log(bbo);
+console.log(monster); // {name: '하린', age: 10, exp: 2}
+console.log(bbo); // {name: '뽀', age: 20, exp: 10}

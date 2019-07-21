@@ -1,5 +1,6 @@
-var family = {
-  'address': 'Seoul',
+// 리터럴 표기법으로 객체를 family 변수에 대입하고 있는 것
+var person = {
+  'name': 'chulsu',
   members: {},
   addFamily: function(age, name, role) {
     this.members[role] = {
@@ -12,7 +13,7 @@ var family = {
   }
 };
 
-family.addFamily(30, 'chloe', 'aunt');
-family.addFamily(3, 'lyn', 'niece');
-family.addFamily(10, 'dangdangi', 'dog');
-console.log(family.getHeadcount());
+person.addFamily(30, 'chloe', 'aunt');
+person.addFamily(3, 'lyn', 'niece');
+person.addFamily(10, 'dangdangi', 'dog');
+console.log(person.getHeadcount()); // 3

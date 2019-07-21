@@ -12,32 +12,32 @@
     const div1El = document.getElementById('div1');
     const input1 = document.getElementById('input1');
 
-    console.log(div1El.hasAttribute('id'));
-    console.log(div1El.getAttribute('id'));
-    console.log(div1El.id);
+    console.log(div1El.hasAttribute('id')); // true
+    console.log(div1El.getAttribute('id')); // div1
+    console.log(div1El.id); // div1
 
     div1El.removeAttribute('id');
-    console.log(div1El.id);    
-    div1El.setAttribute('id', 'new-id');
-    console.log(div1El.id);
+    console.log(div1El.id);  // 제거해서 빈 값
+    div1El.setAttribute('id', 'new-id');  // id 새로 등록
+    console.log(div1El.id); // new-id
 
-    div1El.id = 'new-id-2';
-    console.log(div1El.getAttribute('id'));
+    div1El.id = 'new-id-2'; // id 새로 등록 이렇게도 할 수 있음
+    console.log(div1El.getAttribute('id')); // new-id-2
 
-    console.log(div1El.getAttribute('class'))
-    console.log(div1El.class);
-    console.log(div1El.className);
+    console.log(div1El.getAttribute('class')) // div-class
+    console.log(div1El.class);  // undefined
+    console.log(div1El.className);  // div-class
     
     div1El.setAttribute('class', 'new-div-class');
-    console.log(div1El.className);
+    console.log(div1El.className);  // new-div-class
     div1El.className = 'new-div-class2';
-    console.log(div1El.getAttribute('class'))
+    console.log(div1El.getAttribute('class')) // new-div-class2
 
     const valueAttr = input1.getAttribute('value');
-    console.log(valueAttr);
-    console.log(input1.value);
+    console.log(valueAttr); // jay
+    console.log(input1.value);  // jay
     input1.value = 'jay2';
-    console.log(input1.getAttribute('value'));
+    console.log(input1.getAttribute('value'));   // value는 바뀌지 않음
   </script>
 </body>
 </html>

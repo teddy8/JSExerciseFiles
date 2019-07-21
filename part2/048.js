@@ -2,7 +2,7 @@ const teacherJay = {
   name: '제이',
   age: 40,
   teachJavascript: function(student) {
-    student.gainExp();
+    student.gainExp();  // 들어온 객체의 gainExp 실행
   }
 }
 
@@ -14,6 +14,6 @@ const studentBbo = {
     this.exp++;
   }
 };
-console.log(studentBbo.exp);
+console.log(studentBbo.exp);  // 0
 teacherJay.teachJavascript(studentBbo);
-console.log(studentBbo.exp);
+console.log(studentBbo.exp);  // 1

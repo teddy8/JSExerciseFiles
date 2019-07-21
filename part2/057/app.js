@@ -1,4 +1,4 @@
-import Hello from './hello.js';
+import Person from './person.js';
 
-const koreanHi = new Hello('안녕하세요.');
-koreanHi.hi('하린');
+const chulsu = new Person(20);
+chulsu.speedUp(5);
