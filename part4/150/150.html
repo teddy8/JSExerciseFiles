@@ -13,13 +13,13 @@
   <button id="order-btn">주문하기</button>
 </div>
 <script>
-  function buildAlert(title, message) {
-    const alert = document.createElement('div');
-    const id = Math.ceil(Math.random() * 1000);
+  function buildAlert(title, message) { // 알림창 생성 함수 정의
+    const alert = document.createElement('div');  // div요소 생성
+    const id = Math.ceil(Math.random() * 1000);   // 알림창의 고유키 생성
 
-    alert.className = 'alert';
+    alert.className = 'alert';  // &times; 는 닫기버튼(특수문자 x)
     alert.innerHTML = `
-      <span class="close">&times;</span>
+      <span class="close">&times;</span> 
       <h3>${title}</h3>
       <p>${message}</p>`;
     alert.id = id;
@@ -32,7 +32,7 @@
         alert.dispatchEvent(closeEvt);
         alert.remove();
       });
-    document.body.prepend(alert);
+    document.body.prepend(alert); // alert를body의 가장 위에 추가
       
     return alert;
   }

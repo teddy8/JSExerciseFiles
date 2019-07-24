@@ -15,17 +15,17 @@
 </head>
 <body>
 <script>
-  class NotificationBar {
-    constructor() {
-      this.barEl = document.createElement('div');
-      this.barEl.style.display = "none";
-      this.barEl.classList.add("notification-bar")
-      document.body.appendChild(this.barEl);
+  class NotificationBar { // 클래스 정의 (ES6)
+    constructor() { // 생성자
+      this.barEl = document.createElement('div'); // div 요소 생성
+      this.barEl.style.display = "none";  
+      this.barEl.classList.add("notification-bar")  // style 추가
+      document.body.appendChild(this.barEl);  // div를 body의 자식으로 추가
     }
-    show(message, position = "top") {
+    show(message, position = "top") { // show 메소드(메시지, 위치)
       if (position === "top") {
         this.barEl.style.top = "10px";
-        this.barEl.style.bottom = "";
+        this.barEl.style.bottom = ""; // 빈문자열은 이미 적용된 값으로 리셋
       }
       if (position === "bottom") {
         this.barEl.style.top = "";
@@ -33,12 +33,12 @@
       }
       this.barEl.style.left = "10px";
       this.barEl.style.right = "10px";
-      this.barEl.style.display = "";
+      this.barEl.style.display = "";  // display 리셋
       this.barEl.innerHTML = message;
     }
   }
 
-  const noti = new NotificationBar();  
+  const noti = new NotificationBar();
   setTimeout(() => {
     noti.show('welcome to JavaScript 200');  
   }, 1000);

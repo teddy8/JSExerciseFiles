@@ -11,7 +11,7 @@
   <ul id="product-list">
   </ul>
   <script>
-    const products = [
+    const products = [  // 객체 배열 정의
       { id: 'p-01', name: '상품1' },
       { id: 'p-02', name: '상품2' },
       { id: 'p-03', name: '상품3' }
@@ -32,7 +32,14 @@
       secondEl.remove();
     }, 1000);
     productListEl.after("<div>잘못된 사용</div>");
-    productListEl.insertAdjacentHTML('afterend',"<p>추가된 문단</p>");
+    productListEl.insertAdjacentHTML('afterend', "<p>추가된 문단</p>"); // afterend를 사용하여 '추가된문단'을 insert한다
   </script>
 </body>
 </html>
+
+<!--
+before begin
+after  begin
+before end
+after  end
+-->
